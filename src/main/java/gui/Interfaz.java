@@ -68,6 +68,22 @@ public class Interfaz extends javax.swing.JFrame {
      }
     
 }
+    
+  private void anyadirComponentes(){
+      // 3. Panel inferior para controles
+    JPanel controlPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
+    controlPanel.setBackground(Color.LIGHT_GRAY);
+
+    // 4. Añadir componentes al panel de controles
+    joystick1.setPreferredSize(new Dimension(200, 200));
+    keyboardAction1.setPreferredSize(new Dimension(200, 70));
+    controlPanel.add(keyboardAction1);
+    controlPanel.add(joystick1);
+
+    // 5. Añadir panel de controles al frame
+    getContentPane().add(controlPanel, BorderLayout.SOUTH);
+
+  }
    //A partir de aquí son métodos para el juego de plataforma
   private void platformGame() {
     // Configurar layout principal
@@ -81,20 +97,9 @@ public class Interfaz extends javax.swing.JFrame {
      // Inicializar lista de monedas
         
     resetMonedas();
-
-    // 3. Panel inferior para controles
-    JPanel controlPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
-    controlPanel.setBackground(Color.LIGHT_GRAY);
-
-    // 4. Añadir componentes al panel de controles
-    joystick1.setPreferredSize(new Dimension(200, 200));
-    keyboardAction1.setPreferredSize(new Dimension(200, 70));
-    controlPanel.add(keyboardAction1);
-    controlPanel.add(joystick1);
-
-    // 5. Añadir panel de controles al frame
-    getContentPane().add(controlPanel, BorderLayout.SOUTH);
-
+    
+    anyadirComponentes();
+    
     // Configurar eventos para joystick
     joystick1.addJoystickEvents(new Joystick.JoystickEvents() {
         @Override public void onJoystickReleased() {
