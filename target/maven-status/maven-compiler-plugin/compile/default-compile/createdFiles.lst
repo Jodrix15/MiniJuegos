@@ -1,9 +1,0 @@
-gui\Interfaz.class
-gui\Interfaz$1.class
-com\juego\juegoplataforma\Player.class
-com\juego\juegoplataforma\Missile.class
-com\juego\juegoplataforma\Enemy.class
-com\juego\juegoplataforma\Platform.class
-gui\MenuPrincipal.class
-com\juego\juegoplataforma\GamePanel.class
-com\juego\juegoplataforma\Moneda.class
